@@ -1,0 +1,37 @@
+<title>AGENDA PET BANHO - Reserva</title>
+
+{% extends "base.html" %}
+{% load bootstrap5 %}
+
+{% block conteudo %}
+
+{% if sucesso %}
+<div class="row justify-content-center">
+    <p class="alert alert-success col-md-4 border border-black fw-medium">OK!</p>
+    <p class="lead mb-4"></p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a href="{% url 'home' %}">
+        <button type="button" class="btn btn-warning btn-lg border border-black fw-medium">PÁGINA INICIAL</button>
+      </a>
+    </div>
+</div>
+
+{% else %}
+
+<h1 class="display-5 fw-bold text-body-emphasis">Reserva</h1>
+<div class="row justify-content-center">
+<div class="col-md-4 text-start">
+  <p class="lead mb-4"></p>
+<form action="" method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <div class="text-end">
+    <button class="btn btn-warning border border-black fw-medium" type="submit">CONFIRMAR RESERVA</button>
+  </div>
+</form>
+</div>
+</div>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<title>AGENDA PET BANHO - Fale Conosco</title>
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1 class="display-5 fw-bold text-body-emphasis">Fale Conosco</h1>
+<div class="row justify-content-center">
+    <div class="col-md-4 text-start">
+        <p class="lead mb-4"></p>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput2" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="exemplo@exemplo.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="text-end">
+            <button class="btn btn-warning border border-black fw-medium" type="submit">ENVIAR</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

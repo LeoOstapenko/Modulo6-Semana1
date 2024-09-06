@@ -1,0 +1,23 @@
+<title>Prática Django</title>
+
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1 class="display-5 fw-bold text-body-emphasis">AGENDA PET BANHO</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4"></p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{% url 'reserva' %}">
+          <button type="button" class="btn btn-warning btn-lg border border-black fw-medium">FAÇA SUA RESERVA</button>
+        </a>
+      </div>
+      <p class="lead mb-4"></p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="{% url 'contato' %}">
+          <button type="button" class="btn btn-warning btn-lg border border-black fw-medium">FALE CONOSCO</button>
+        </a>
+      </div>
+    </div>
+
+{% endblock %}
